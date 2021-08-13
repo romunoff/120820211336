@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useState} from "react";
+import comments from "../../comments.json"
 import profilePhoto from "../../profilePhoto.png"
 import LikeIcon from "../../statics/icons/like.svg"
 import CommentIcon from "../../statics/icons/comment.svg"
@@ -6,6 +7,31 @@ import {CommentBlock} from "../../components/CommentBlock";
 import "./styles.css"
 
 const TestPage = () => {
+    const [list, setList] = useState(comments)
+    const [textAreaValue, setTextAreaValue] = useState("")
+
+    document.onkeyup = (e) => {
+        if (e.ctrlKey && e.keyCode === 13) {
+            addComment()
+        }
+    }
+
+    const handleChange = (e) => {
+        setTextAreaValue(e.currentTarget.value)
+    }
+
+    const addComment = () => {
+        if (textAreaValue.trim()) {
+            const newList = [...list, {
+                "person": "Никита Романов",
+                "date": "13 августа 2021",
+                "text": textAreaValue
+            }]
+            setList(newList)
+            setTextAreaValue("")
+        }
+    }
+
     return (
         <div className="container">
             <div className="main">
@@ -67,13 +93,13 @@ const TestPage = () => {
                             </div>
                         </div>
                     </div>
-                    <CommentBlock/>
-                    <CommentBlock/>
+                    {list.map((item, index) => <CommentBlock key={index} person={item.person} date={item.date}
+                                                             text={item.text}/>)}
                 </div>
             </div>
             <div className="footer">
-                <textarea className="footer__textarea"/>
-                <button className="footer__button">Написать консультанту</button>
+                <textarea className="footer__textarea" onChange={handleChange} value={textAreaValue}/>
+                <button className="footer__button" onClick={addComment}>Написать консультанту</button>
             </div>
         </div>
     )

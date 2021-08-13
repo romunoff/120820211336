@@ -1,17 +1,17 @@
 import React from "react";
 import "./styles.css"
 
-const CommentBlock = () => {
+const CommentBlock = ({person, date, text}) => {
     return <div className="feedbacks_comment">
         <div className="comment_info">
             <div className="info_person">
-                Самуил
+                {person}
             </div>
             <div className="info_date">
-                13 октября 2011
+                {date}
             </div>
         </div>
-        <div className="comment_description callout">Привет, Верунь! ниче себе ты крутая. фотка класс!!!!</div>
+        <div className="comment_description callout">{text}</div>
     </div>
 }
 

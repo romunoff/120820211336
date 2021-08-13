@@ -1,8 +1,8 @@
 import React from "react";
-import { TestPage } from "./TestPage";
+import {TestPage} from "./TestPage";
 
 const RenderPages = () => {
-    return <TestPage />
+    return <TestPage/>
 }
 
-export { RenderPages }
+export {RenderPages}
