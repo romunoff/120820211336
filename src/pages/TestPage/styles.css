@@ -5,6 +5,7 @@
 .container {
     margin: 0 auto;
     max-width: 720px;
+    min-width: 360px;
     font-family: Arial, serif;
     font-size: 14px;
     font-weight: 400;
@@ -39,19 +40,19 @@
     line-height: 20px;
 }
 
-.header_title__heading {
+.title_heading {
     font-size: 16px;
     font-weight: 700;
 }
 
-.header_title__career {
+.title_career {
     font-size: 12px;
     font-weight: 400;
     color: #808080;
     margin-bottom: 5px;
 }
 
-.header_title__description {
+.title_description {
     position: relative;
     padding: 10px;
     border: 1px solid #DADADA;
@@ -61,25 +62,21 @@
     margin-bottom: 13px;
 }
 
-.header_title__description > div {
+.title_description > div {
     margin-left: 35px;
 }
 
-.header_title__services {
-
-}
-
-.header_title__services > hr {
+.title_services > hr {
     border: 1px solid #DADADA;
     margin-bottom: 16px;
 }
 
-.header_title__services > hr:last-child {
+.title_services > hr:last-child {
     margin-bottom: 9px;
     margin-top: 15px;
 }
 
-.services__heading {
+.services_heading {
     display: flex;
     justify-content: flex-end;
     padding-right: 35px;
@@ -93,18 +90,18 @@
     font-size: 13px;
 }
 
-.diagram__element {
+.diagram_element {
     border-radius: 0 3px 3px 0;
     min-height: 24px;
     line-height: 26px;
     margin-bottom: 2px;
 }
 
-.diagram__element:last-child {
+.diagram_element:last-child {
     margin-bottom: 0;
 }
 
-.diagram__element > span {
+.diagram_element > span {
     position: absolute;
 }
 
@@ -129,23 +126,19 @@
     margin-left: 40px;
 }
 
-.services__footer {
+.services_footer {
     display: flex;
     justify-content: space-between;
     font-size: 16px;
     font-weight: 700;
 }
 
-.services__footer > span {
+.services_footer > span {
     display: inline-block;
 }
 
-.services__footer > span:last-child {
+.services_footer > span:last-child {
     padding-right: 40px;
-}
-
-.feedbacks {
-
 }
 
 .feedbacks_info {
@@ -194,7 +187,7 @@
     align-items: center;
 }
 
-.footer__textarea {
+.footer_textarea {
     width: 100%;
     height: 63px;
     background: #FFFFFF;
@@ -203,7 +196,7 @@
     margin-bottom: 23px;
 }
 
-.footer__button {
+.footer_button {
     background: #FDD639;
     border: 0;
     border-radius: 23px;

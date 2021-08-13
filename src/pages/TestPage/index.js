@@ -40,36 +40,36 @@ const TestPage = () => {
                         <img className="header_photo__img" src={profilePhoto} alt="profilePhoto"/>
                     </div>
                     <div className="header_title">
-                        <div className="header_title__heading">Вероника Ростова</div>
-                        <div className="header_title__career">Менеджер по продажам</div>
-                        <div className="header_title__description">
+                        <div className="title_heading">Вероника Ростова</div>
+                        <div className="title_career">Менеджер по продажам</div>
+                        <div className="title_description">
                             <div>
                                 Подберу для вас самые лучшие предложения. Мои услуги абсолютно бесплатны
                             </div>
                         </div>
-                        <div className="header_title__services">
-                            <div className="services__heading">Услуг</div>
+                        <div className="title_services">
+                            <div className="services_heading">Услуг</div>
                             <hr/>
                             <div className="services_diagram">
-                                <div className="diagram__element element__green">
+                                <div className="diagram_element element__green">
                                     <span>Ручное бронирование</span>
                                 </div>
                                 <div className="diagram_counter">11</div>
                             </div>
                             <div className="services_diagram">
-                                <div className="diagram__element element__blue1">
+                                <div className="diagram_element element__blue1">
                                     <span>Пакетные туры</span>
                                 </div>
                                 <div className="diagram_counter">3</div>
                             </div>
                             <div className="services_diagram">
-                                <div className="diagram__element element__blue2">
+                                <div className="diagram_element element__blue2">
                                     <span>Отели</span>
                                 </div>
                                 <div className="diagram_counter">1</div>
                             </div>
                             <hr/>
-                            <div className="services__footer">
+                            <div className="services_footer">
                                 <span>Всего</span>
                                 <span>15</span>
                             </div>
@@ -98,8 +98,8 @@ const TestPage = () => {
                 </div>
             </div>
             <div className="footer">
-                <textarea className="footer__textarea" onChange={handleChange} value={textAreaValue}/>
-                <button className="footer__button" onClick={addComment}>Написать консультанту</button>
+                <textarea className="footer_textarea" onChange={handleChange} value={textAreaValue}/>
+                <button className="footer_button" onClick={addComment}>Написать консультанту</button>
             </div>
         </div>
     )
